@@ -1,0 +1,636 @@
+{
+	"info": {
+		"_postman_id": "87bd6e8c-b32e-438c-8801-b42f16ff0f3b",
+		"name": "Capstone_Project_MovieTicketBooking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18279886"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Thomas Hehe\",\r\n    \"lastName\": \"Le\",\r\n    \"DOB\": \"1996-06-30\",\r\n    \"email\": \"lethanhduy1234@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"phoneNumber\": \"0123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/users/sign-up",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"users",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"lethanhduy123@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/users/sign-in",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"users",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user info",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Thomas Updated\",\r\n    \"lastName\": \"Le Updated\",\r\n    \"DOB\": \"1996-06-30\",\r\n    \"phoneNumber\": \"012457896\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/users/update",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/users/delete/26",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"users",
+								"delete",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user list all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/users/get-user-list-all",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"users",
+								"get-user-list-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search users by keyword",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/users/search-user?keyword=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"users",
+								"search-user"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user list by pagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/users/get-user-list-by-pagination?page=1&itemPerPage=2",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"users",
+								"get-user-list-by-pagination"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "itemPerPage",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Films",
+			"item": [
+				{
+					"name": "Get film list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/films/get-film-list",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"films",
+								"get-film-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get film detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/films/get-film-detail/23",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"films",
+								"get-film-detail",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add film",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Urban Myth\",\r\n    \"genre\": \"Horror\",\r\n    \"trailer\": \"https://www.youtube.com/watch?v=rENXd4Eq5rw\",\r\n    \"rate\": \"6.5\",\r\n    \"length\": \"122\",\r\n    \"description\": \" Những câu chuyện ma đáng sợ nhất của đô thị Seoul Hàn Quốc! Tác phẩm gồm 10 câu chuyện ma có nội dung độc lập nhưng đều lấy bối cảnh ở thủ đô Seoul thời hiện đại.\",\r\n    \"director\": \"Hong Won Ki\",\r\n    \"actor\": \" Shownu, Lee Min Hyuk, Arin\",\r\n    \"releaseDate\": \"2022-05-12\",\r\n    \"isReleased\": \"true\",\r\n    \"coomingSoon\": \"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/films/add-film",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"films",
+								"add-film"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update film",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Urban Myth\",\r\n    \"genre\": \"Horror\",\r\n    \"trailer\": \"https://www.youtube.com/watch?v=rENXd4Eq5rw\",\r\n    \"rate\": \"6.5\",\r\n    \"length\": \"122\",\r\n    \"description\": \" Những câu chuyện ma đáng sợ nhất của đô thị Seoul Hàn Quốc! Tác phẩm gồm 10 câu chuyện ma có nội dung độc lập nhưng đều lấy bối cảnh ở thủ đô Seoul thời hiện đại.\",\r\n    \"director\": \" Hong Won Ki\",\r\n    \"actor\": \" Shownu, Lee Min Hyuk, Arin\",\r\n    \"releaseDate\": \"2022-05-12\",\r\n    \"isReleased\": \"true\",\r\n    \"coomingSoon\": \"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/films/update-film-detail/4",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"films",
+								"update-film-detail",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update poster film",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "poster",
+									"type": "file",
+									"src": "/D:/IT/3.Study_Duy/2. CyberSoft/Official Cybersoft/Backend/Bai_tap/MovieTicketBooking/images/film/poster/urbanmyth.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/films/poster/9",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"films",
+								"poster",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete film by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/films/delete/9",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"films",
+								"delete",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get film list by pagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/films/get-film-list-pagination?page=1&itemPerPage=5",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"films",
+								"get-film-list-pagination"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "itemPerPage",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get film list by released date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/films/get-film-list-by-release-date?date=2022-05-08",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"films",
+								"get-film-list-by-release-date"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2022-05-08"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cinema",
+			"item": [
+				{
+					"name": "Get cinema chain list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/cinema/get-cinema-chain-list?chainCode=galaxy",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"cinema",
+								"get-cinema-chain-list"
+							],
+							"query": [
+								{
+									"key": "chainCode",
+									"value": "galaxy"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cinemas by chain code",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{domain}}/cinema/get-cinema-by-cinema-chain?chainCode=cgv",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"cinema",
+								"get-cinema-by-cinema-chain"
+							],
+							"query": [
+								{
+									"key": "chainCode",
+									"value": "cgv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get list of seats by showntime id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/cinema/get-seat-list-by-showtime?showtimeId=177",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"cinema",
+								"get-seat-list-by-showtime"
+							],
+							"query": [
+								{
+									"key": "showtimeId",
+									"value": "177"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Showtime",
+			"item": [
+				{
+					"name": "Get showtime by chain code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/showtime/get-showtime-by-cinema-chain?chainCode=galaxy",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"showtime",
+								"get-showtime-by-cinema-chain"
+							],
+							"query": [
+								{
+									"key": "chainCode",
+									"value": "galaxy"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get showtime by filmId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/showtime/get-showtime-by-film?filmId=5",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"showtime",
+								"get-showtime-by-film"
+							],
+							"query": [
+								{
+									"key": "filmId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create showtime",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filmId\": \"2\",\r\n    \"dateTime\": \"2022-05-29T08:00:00\",\r\n    \"theaterId\": \"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/showtime/creat-showtime",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"showtime",
+								"creat-showtime"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "Create ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"showtimeId\": \"177\",\r\n    \"seatList\": [\r\n        {\r\n            \"seatId\": \"31\",\r\n            \"price\": \"50000\"\r\n        },\r\n        {\r\n            \"seatId\": \"38\",\r\n            \"price\": \"70000\"\r\n        }, \r\n        {\r\n            \"seatId\": \"40\",\r\n            \"price\": \"70000\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/ticket/create-ticket",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"ticket",
+								"create-ticket"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoyMywiaWF0IjoxNjU0MDc0Nzc4LCJleHAiOjE2NTQxNjExNzh9.96uGH2I1pfc1-FMo85-DejVfT1xGpLHPAEPMLiXrJxw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:3001/",
+			"type": "string"
+		}
+	]
+}
