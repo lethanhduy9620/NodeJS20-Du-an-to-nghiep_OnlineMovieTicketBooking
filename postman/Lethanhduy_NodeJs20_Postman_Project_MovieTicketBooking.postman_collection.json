@@ -2,12 +2,13 @@
 	"info": {
 		"_postman_id": "87bd6e8c-b32e-438c-8801-b42f16ff0f3b",
 		"name": "Capstone_Project_MovieTicketBooking",
+		"description": "In authorization section, the token is taken from identity token after logging in",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "18279886"
 	},
 	"item": [
 		{
-			"name": "Users",
+			"name": "User Managament",
 			"item": [
 				{
 					"name": "Sign up",
@@ -32,7 +33,8 @@
 								"users",
 								"sign-up"
 							]
-						}
+						},
+						"description": "This API is used to sign up an account"
 					},
 					"response": []
 				},
@@ -59,7 +61,8 @@
 								"users",
 								"sign-in"
 							]
-						}
+						},
+						"description": "This API is used to sign in with an account"
 					},
 					"response": []
 				},
@@ -86,7 +89,8 @@
 								"users",
 								"update"
 							]
-						}
+						},
+						"description": "This API is used to update personal information"
 					},
 					"response": []
 				},
@@ -105,7 +109,8 @@
 								"delete",
 								"26"
 							]
-						}
+						},
+						"description": "This API is used to delete an available user's account"
 					},
 					"response": []
 				},
@@ -123,7 +128,8 @@
 								"users",
 								"get-user-list-all"
 							]
-						}
+						},
+						"description": "This API is used to get all available user accounts"
 					},
 					"response": []
 				},
@@ -147,7 +153,8 @@
 									"value": ""
 								}
 							]
-						}
+						},
+						"description": "This API is used to find user accounts with a keyword"
 					},
 					"response": []
 				},
@@ -175,14 +182,15 @@
 									"value": "2"
 								}
 							]
-						}
+						},
+						"description": "This API is used to get available user accounts in the database with pagination"
 					},
 					"response": []
 				}
 			]
 		},
 		{
-			"name": "Films",
+			"name": "Film Management",
 			"item": [
 				{
 					"name": "Get film list",
@@ -198,7 +206,8 @@
 								"films",
 								"get-film-list"
 							]
-						}
+						},
+						"description": "This API is used to get a list of films"
 					},
 					"response": []
 				},
@@ -217,7 +226,8 @@
 								"get-film-detail",
 								"23"
 							]
-						}
+						},
+						"description": "This API is used to get detailed information of a film by film ID"
 					},
 					"response": []
 				},
@@ -244,7 +254,8 @@
 								"films",
 								"add-film"
 							]
-						}
+						},
+						"description": "This API is used to insert a new film"
 					},
 					"response": []
 				},
@@ -272,7 +283,8 @@
 								"update-film-detail",
 								"4"
 							]
-						}
+						},
+						"description": "This API is used to update detailed information of a film"
 					},
 					"response": []
 				},
@@ -301,7 +313,8 @@
 								"poster",
 								"9"
 							]
-						}
+						},
+						"description": "This API is used to add or update a poster for an available film"
 					},
 					"response": []
 				},
@@ -329,7 +342,8 @@
 								"delete",
 								"9"
 							]
-						}
+						},
+						"description": "This API is used to delete an available film"
 					},
 					"response": []
 				},
@@ -357,7 +371,8 @@
 									"value": "5"
 								}
 							]
-						}
+						},
+						"description": "This API is used to get a list of films with pagination."
 					},
 					"response": []
 				},
@@ -381,14 +396,15 @@
 									"value": "2022-05-08"
 								}
 							]
-						}
+						},
+						"description": "This API is used to get a list of films at a specific released date"
 					},
 					"response": []
 				}
 			]
 		},
 		{
-			"name": "Cinema",
+			"name": "Cinema Management",
 			"item": [
 				{
 					"name": "Get cinema chain list",
@@ -410,7 +426,8 @@
 									"value": "galaxy"
 								}
 							]
-						}
+						},
+						"description": "StartFragment\n\nThis API is used to get a list of cinema chain\n\nEndFragment"
 					},
 					"response": []
 				},
@@ -441,7 +458,8 @@
 									"value": "cgv"
 								}
 							]
-						}
+						},
+						"description": "This API is used to get list of cinemas by a cinema chain code"
 					},
 					"response": []
 				},
@@ -477,14 +495,15 @@
 									"value": "177"
 								}
 							]
-						}
+						},
+						"description": "This API is used to get a list of seats by a showtime ID"
 					},
 					"response": []
 				}
 			]
 		},
 		{
-			"name": "Showtime",
+			"name": "Showtime Management",
 			"item": [
 				{
 					"name": "Get showtime by chain code",
@@ -506,7 +525,8 @@
 									"value": "galaxy"
 								}
 							]
-						}
+						},
+						"description": "This API is used to get a list of showtime by a cinema chain code"
 					},
 					"response": []
 				},
@@ -530,7 +550,8 @@
 									"value": "5"
 								}
 							]
-						}
+						},
+						"description": "This API is used to get a list of showtime by a film ID"
 					},
 					"response": []
 				},
@@ -557,14 +578,15 @@
 								"showtime",
 								"creat-showtime"
 							]
-						}
+						},
+						"description": "This API is used to create a showtime"
 					},
 					"response": []
 				}
 			]
 		},
 		{
-			"name": "Ticket",
+			"name": "Ticket Management",
 			"item": [
 				{
 					"name": "Create ticket",
@@ -589,7 +611,8 @@
 								"ticket",
 								"create-ticket"
 							]
-						}
+						},
+						"description": "This API is used to create a ticket"
 					},
 					"response": []
 				}
